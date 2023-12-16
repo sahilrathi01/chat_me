@@ -1,0 +1,14 @@
+class SignInState {
+  String email;
+  String password;
+  SignInState({
+    this.email = '',
+    this.password = '',
+  });
+  SignInState copyWith({String? email, password}) {
+    return SignInState(
+      email: email ?? this.email,
+      password: password ?? this.password,
+    );
+  }
+}
