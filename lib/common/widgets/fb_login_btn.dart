@@ -6,9 +6,9 @@ import 'package:sizer/sizer.dart';
 
 class FbLoginButton extends StatelessWidget {
   const FbLoginButton({
-    Key? key,
+    super.key,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   final VoidCallback onTap;
 

@@ -7,8 +7,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 class AppInput extends StatefulWidget {
-  AppInput({
-    Key? key,
+  const AppInput({
+    super.key,
     // required this.focusNode,
     this.valueKey = "",
     this.hintText = "",
@@ -32,7 +32,7 @@ class AppInput extends StatefulWidget {
     this.error,
     this.suffixIcon,
     this.maxLength,
-  }) : super(key: key);
+  });
   final String valueKey;
   final String hintText;
   final double? borderRadius;
@@ -46,7 +46,7 @@ class AppInput extends StatefulWidget {
   final Function(String)? onChanged;
   final Function()? onTap;
   final bool readOnly;
-  bool obscureText;
+  final bool obscureText;
   final bool autoFocus;
   final bool isSuffix;
   final String? error;

@@ -5,7 +5,7 @@ import 'package:sizer/sizer.dart';
 
 class AppButton extends StatelessWidget {
   const AppButton({
-    Key? key,
+    super.key,
     required this.onTap,
     this.title = "title",
     this.createAccount = false,
@@ -19,7 +19,7 @@ class AppButton extends StatelessWidget {
     this.borderColor = Colors.black,
     this.titleColor = Colors.white,
     this.postIcon = "none",
-  }) : super(key: key);
+  });
 
   final String title;
   final String postIcon;

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "675952446276",
+    "project_id": "baatcheet-5335f",
+    "storage_bucket": "baatcheet-5335f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675952446276:android:8fefe49fe5692ea29f2511",
+        "android_client_info": {
+          "package_name": "com.example.chat_me"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQKV_qAy_BM9XVFViKoy1G8UbTimJYCVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

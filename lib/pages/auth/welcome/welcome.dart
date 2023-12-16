@@ -1,7 +1,7 @@
 import 'package:chat_me/common/widgets/app_button.dart';
-import 'package:chat_me/pages/welcome/bloc/welcome_bloc.dart';
-import 'package:chat_me/pages/welcome/bloc/welcome_event.dart';
-import 'package:chat_me/pages/welcome/bloc/welcome_state.dart';
+import 'package:chat_me/pages/auth/welcome/bloc/welcome_bloc.dart';
+import 'package:chat_me/pages/auth/welcome/bloc/welcome_event.dart';
+import 'package:chat_me/pages/auth/welcome/bloc/welcome_state.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,7 +22,7 @@ class _WelComeState extends State<WelCome> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          '',
+          'ChatME',
           style: GoogleFonts.jost(
             fontStyle: FontStyle.normal,
             fontSize: 20.sp,
@@ -95,7 +95,7 @@ class _WelComeState extends State<WelCome> {
                   onTap: () {
                     if (state.page < state.pageList.length - 1) {
                       controller.nextPage(
-                        duration: const Duration(milliseconds: 700),
+                        duration: const Duration(milliseconds: 500),
                         curve: Curves.easeIn,
                       );
                     } else {

@@ -6,9 +6,9 @@ import 'package:sizer/sizer.dart';
 
 class AppleLoginButton extends StatelessWidget {
   const AppleLoginButton({
-    Key? key,
+    super.key,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   final VoidCallback onTap;
 
