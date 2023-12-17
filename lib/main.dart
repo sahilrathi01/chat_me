@@ -1,4 +1,6 @@
+import 'package:chat_me/pages/app/bottomTab/bottom_tab.dart';
 import 'package:chat_me/pages/app_bloc_providers.dart';
+import 'package:chat_me/pages/auth/register/register.dart';
 
 import 'package:chat_me/pages/auth/signIn/sign_in.dart';
 import 'package:chat_me/pages/auth/welcome/welcome.dart';
@@ -8,7 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:sizer/sizer.dart';
 
-GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,19 +31,21 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'Flutter Demo',
           builder: FToastBuilder(),
-          navigatorKey: navigatorKey,
+          navigatorKey: _navigatorKey,
           theme: ThemeData(
             useMaterial3: true,
             appBarTheme: const AppBarTheme(
               backgroundColor: Colors.white,
               elevation: 0,
               centerTitle: true,
+              foregroundColor: Colors.black,
             ),
           ),
-          home: const SignIn(),
+          home: const BottomTab(),
           routes: {
             "welCome": (context) => const WelCome(),
             "signIn": (context) => const SignIn(),
+            "register": (context) => const Register(),
           },
         );
       }),

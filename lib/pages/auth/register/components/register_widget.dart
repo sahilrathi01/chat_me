@@ -1,8 +1,3 @@
-import 'package:chat_me/common/utils/spacer.dart';
-import 'package:chat_me/common/widgets/apple_login_btn.dart';
-import 'package:chat_me/common/widgets/common_widget.dart';
-import 'package:chat_me/common/widgets/fb_login_btn.dart';
-import 'package:chat_me/common/widgets/google_login_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
@@ -10,7 +5,7 @@ import 'package:sizer/sizer.dart';
 AppBar buildAppBar() {
   return AppBar(
     title: Text(
-      "Log In",
+      "Register",
       style: GoogleFonts.jost(
         fontWeight: FontWeight.w600,
       ),
@@ -25,30 +20,37 @@ AppBar buildAppBar() {
   );
 }
 
-Widget forgotPassword() {
+Widget buildLoginText(context) {
   return InkWell(
-    borderRadius: BorderRadius.circular(10),
-    child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      child: CommonWidget.apptext(
-        "Forgot password?",
-        fontWeight: FontWeight.w600,
-        decoration: TextDecoration.underline,
-        decorationThickness: 2,
+    child: Center(
+      child: InkWell(
+        onTap: () {
+          Navigator.of(context).pop();
+        },
+        child: RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              children: <TextSpan>[
+                TextSpan(
+                  text: 'Already have an account? ',
+                  style: GoogleFonts.jost(
+                    color: Colors.black,
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                TextSpan(
+                  text: 'Sign In',
+                  style: GoogleFonts.jost(
+                    color: Colors.black,
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ],
+            )),
       ),
     ),
-    onTap: () {},
-  );
-}
-
-Widget buildThirdPartLogin(BuildContext context) {
-  return Column(
-    children: [
-      AppleLoginButton(onTap: () {}),
-      vSpacer(2.h),
-      GoogleLoginButton(onTap: () {}),
-      vSpacer(2.h),
-      FbLoginButton(onTap: () {}),
-    ],
   );
 }

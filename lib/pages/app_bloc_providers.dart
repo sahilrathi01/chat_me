@@ -1,3 +1,4 @@
+import 'package:chat_me/pages/auth/register/bloc/register_blocs.dart';
 import 'package:chat_me/pages/auth/signIn/bloc/sign_in_blocs.dart';
 import 'package:chat_me/pages/auth/welcome/bloc/welcome_bloc.dart';
 import 'package:chat_me/pages/blocDemo/bloc.dart';
@@ -15,6 +16,9 @@ class AppblocProvider {
         ),
         BlocProvider(
           create: (contex) => SignInBloc(),
+        ),
+        BlocProvider(
+          create: (contex) => RegisterBloc(),
         ),
       ];
 }

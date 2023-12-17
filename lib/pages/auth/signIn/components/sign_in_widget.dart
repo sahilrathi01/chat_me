@@ -52,3 +52,41 @@ Widget buildThirdPartLogin(BuildContext context) {
     ],
   );
 }
+
+Widget buildRegisterText(context) {
+  return InkWell(
+    child: Center(
+      child: InkWell(
+        onTap: () {
+          Navigator.pushNamed(
+            context,
+            'register',
+          );
+        },
+        child: RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              children: <TextSpan>[
+                TextSpan(
+                  text: 'do not have an account? ',
+                  style: GoogleFonts.jost(
+                    color: Colors.black,
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                TextSpan(
+                  text: 'Register',
+                  style: GoogleFonts.jost(
+                    color: Colors.black,
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ],
+            )),
+      ),
+    ),
+  );
+}

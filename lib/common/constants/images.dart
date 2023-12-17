@@ -7,4 +7,9 @@ class Images {
   static const String appleLogo = "assets/icons/appleLogo.png";
   static const String fbLogo = "assets/icons/fbLogo.png";
   static const String googleLogo = "assets/icons/googleLogo.png";
+
+  //appIcons
+  static const String menu = "assets/icons/menu.png";
+  static const String headpic = "assets/icons/headpic.png";
+  static const String home = "assets/icons/home.png";
 }

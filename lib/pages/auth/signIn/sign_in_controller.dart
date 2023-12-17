@@ -35,7 +35,7 @@ class SingInController {
             return;
           }
           if (!credential.user!.emailVerified) {
-            toastInfo(msg: "email not verified");
+            toastInfo(msg: "your email address is not verified");
             return;
           }
           final user = credential.user;
@@ -48,7 +48,7 @@ class SingInController {
         } on FirebaseAuthException catch (e) {
           debugPrint(e.code);
           if (e.code == "INVALID_LOGIN_CREDENTIALS") {
-            toastInfo(msg: "Invalid email or password");
+            toastInfo(msg: "user not found");
             return;
           }
           if (e.code == "invalid-email") {
